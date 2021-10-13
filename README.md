@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Company Information Management Form
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A frontend coding challange from ProSpace
 
-## Available Scripts
+It's a simple company and office listing app. It records company's information and its offices. Built on React and used Redux for the state management (as stated in the requirements). For the CSS framework I used Tailwind CSS. And for the form component I utilized React Hook Form. I also set a simple Node.js + Express backend that deployed on a free hosting service.
 
-In the project directory, you can run:
+## Tech Stacks
 
-### `yarn start`
+These are the stacks I used in this project:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Git** — Distributed version control system
+  - **GitHub** — Provides hosting for software development and version control using Git
+- **React** — JavaScript library for building user interfaces
+- **Redux** — Predictable state container for JS apps
+- **React Redux** — Official React binding for Redux
+- **React Router** — Declarative routing for React
+- **React Hook Form** — Simple React forms binding and validation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `yarn test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install dependencies with `yarn`:
 
-### `yarn build`
+```sh
+yarn
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Setup Environment Variables
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+We need to connect to the deployed backend. Edit the `.env` file as follows:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+REACT_APP_API_URL=https://[].railway.app
+REACT_APP_SECRET=your-secret-code
+```
 
-### `yarn eject`
+### Run Development
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+yarn start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Author
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Ahmad Marzuki](https://github.com/amadzuki)
