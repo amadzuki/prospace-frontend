@@ -11,7 +11,7 @@ const App = () => {
         <Route exact path='/'>
           <Home />
         </Route>
-        <Route path='/company'>
+        <Route path='/companies/:id'>
           <Company />
         </Route>
       </Switch>
