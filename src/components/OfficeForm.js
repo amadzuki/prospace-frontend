@@ -68,7 +68,7 @@ const OfficeForm = () => {
               className='input-box'
               placeholder='longitude'
               type='text'
-              {...register('lang', { required: true })}
+              {...register('long', { required: true })}
             />
           </div>
           {(errors.lat || errors.lang) &&
