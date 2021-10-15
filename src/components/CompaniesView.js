@@ -10,11 +10,13 @@ const CompaniesView = () => {
         <p>something went wrong...</p>
       ) : isLoading ? (
         <p>data is loading...</p>
-      ) : data ? (
+      ) : data.companies.length === 0 ? (
+        <p>There is no companies created yet...</p>
+      ) : (
         data.companies.map((companyData) => (
           <CompanyCard {...companyData} key={companyData.id} />
         ))
-      ) : null}
+      )}
     </div>
   )
 }
