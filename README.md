@@ -13,8 +13,12 @@ These are the stacks I used in this project:
 - **React** — JavaScript library for building user interfaces
 - **Redux** — Predictable state container for JS apps
 - **React Redux** — Official React binding for Redux
-- **React Router** — Declarative routing for React
+- **Redux Toolkit** — The official, opinionated, batteries-included toolset for efficient Redux development
+- **RTK Query** — A powerful data fetching and caching tool
+- **React Router DOM** — Declarative routing for React
 - **React Hook Form** — Simple React forms binding and validation
+- **React Toastify** — Super easy toast component
+- **Tailwind CSS** — Rapidly build modern websites without ever leaving your HTML
 
 ## Getting Started
 
@@ -31,8 +35,7 @@ yarn
 We need to connect to the deployed backend. Edit the `.env` file as follows:
 
 ```sh
-REACT_APP_API_URL=https://[].railway.app
-REACT_APP_SECRET=your-secret-code
+REACT_APP_API_URL=https://prospace-backend-production.up.railway.app
 ```
 
 ### Run Development
