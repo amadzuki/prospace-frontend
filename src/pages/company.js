@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { useGetOfficesQuery } from '../redux/services/company'
+import OfficeCard from '../components/OfficeCard'
 
 const Company = () => {
   const { id } = useParams()
@@ -41,7 +42,12 @@ const Company = () => {
               </Link>
             </div>
             <hr className='my-4' />
-            <h1 className='text-2xl'>Offices</h1>
+            <h1 className='text-2xl mb-2'>Offices</h1>
+            <div className='grid grid-cols-2 gap-y-12 gap-x-16'>
+              {data.companyData.offices.map((officeData) => (
+                <OfficeCard {...officeData} key={officeData.id} />
+              ))}
+            </div>
           </div>
         )}
       </div>
