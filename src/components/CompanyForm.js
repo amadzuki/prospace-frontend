@@ -83,7 +83,10 @@ const CompanyForm = () => {
               className='input-box w-3/12'
               placeholder='code'
               type='text'
-              {...register('phoneCode', { required: true })}
+              {...register('phoneCode', {
+                required: true,
+                pattern: /^[0-9]*$/,
+              })}
             />
             <input
               className='input-box w-8/12'
@@ -91,6 +94,7 @@ const CompanyForm = () => {
               type='text'
               {...register('phoneNumber', {
                 required: true,
+                pattern: /^[0-9]*$/,
               })}
             />
           </div>
