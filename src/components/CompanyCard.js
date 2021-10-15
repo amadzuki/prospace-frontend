@@ -26,7 +26,7 @@ const CompanyCard = ({ name, address, revenue, phoneCode, phoneNumber }) => {
 CompanyCard.propTypes = {
   name: PropTypes.string.isRequired,
   address: PropTypes.string.isRequired,
-  revenue: PropTypes.string.isRequired,
+  revenue: PropTypes.number.isRequired,
   phoneCode: PropTypes.string.isRequired,
   phoneNumber: PropTypes.string.isRequired,
 }
