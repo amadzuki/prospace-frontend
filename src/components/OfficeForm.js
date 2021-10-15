@@ -1,5 +1,11 @@
+import { useEffect } from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import DatePicker from 'react-datepicker'
+import { toast } from 'react-toastify'
+import {
+  useGetCompaniesQuery,
+  useAddOfficeMutation,
+} from '../redux/services/company'
 import ErrorMessage from './ErrorMessage'
 
 const OfficeForm = () => {
@@ -8,11 +14,29 @@ const OfficeForm = () => {
     handleSubmit,
     control,
     formState: { errors },
+    reset,
   } = useForm()
 
+  const { data, error, isLoading } = useGetCompaniesQuery()
+
+  const [addOffice, { isLoading: isPosting, isError, isSuccess }] =
+    useAddOfficeMutation()
+
   const onSubmit = (data) => {
-    console.log(data)
+    addOffice(data)
   }
+
+  useEffect(() => {
+    if (!isPosting && isError) {
+      console.log('error toast code')
+      toast.error('Office creation failure...')
+    } else if (!isPosting && isSuccess) {
+      console.log('success toast code')
+      toast.success('Successfully add new office!')
+      reset()
+    }
+  }, [isError, isSuccess])
+
   return (
     <div className='container max-w-md'>
       <h1 className='text-xl font-semibold mb-4'>Create Office</h1>
@@ -90,16 +114,33 @@ const OfficeForm = () => {
             <option value='' disabled hidden>
               select company
             </option>
-            <option value='1'>Apple</option>
-            <option value='2'>Tesla</option>
+            {error ? (
+              <option value='' disabled hidden>
+                something went wrong
+              </option>
+            ) : isLoading ? (
+              <option value='' disabled hidden>
+                data is loading...
+              </option>
+            ) : data.companies.length === 0 ? (
+              <option value='' disabled hidden>
+                There is no company created yet...
+              </option>
+            ) : (
+              data.companies.map((company) => (
+                <option value={company.id} key={company.id}>
+                  {company.name}
+                </option>
+              ))
+            )}
           </select>
-          {(errors.phoneCode || errors.phoneNumber) &&
-            ErrorMessage('Phone code and number is required!')}
+          {errors.companyId && ErrorMessage('Affiliated company is required!')}
         </div>
         <input
+          disabled={isPosting}
           type='submit'
           className='w-full rounded p-2 mt-4 cursor-pointer hover:bg-yellow-100'
-          value='Create'
+          value={isPosting ? 'Adding new office...' : 'Create'}
         />
       </form>
     </div>

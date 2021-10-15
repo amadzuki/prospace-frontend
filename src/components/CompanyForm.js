@@ -1,4 +1,6 @@
+import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
+import { toast } from 'react-toastify'
 import ErrorMessage from './ErrorMessage'
 import { useAddCompanyMutation } from '../redux/services/company'
 
@@ -7,13 +9,27 @@ const CompanyForm = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm()
 
-  const [addCompany, { isLoading }] = useAddCompanyMutation()
+  const [addCompany, { isLoading, isError, isSuccess }] =
+    useAddCompanyMutation()
 
   const onSubmit = (data) => {
     addCompany(data)
   }
+
+  useEffect(() => {
+    if (!isLoading && isError) {
+      console.log('error toast code')
+      toast.error('Office creation failure...')
+    } else if (!isLoading && isSuccess) {
+      console.log('success toast code')
+      toast.success('Successfully add new office!')
+      reset()
+    }
+  }, [isError, isSuccess])
+
   return (
     <div className='container max-w-md'>
       <h1 className='text-xl font-semibold mb-4'>Create Company</h1>

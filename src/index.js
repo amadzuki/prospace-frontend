@@ -4,13 +4,16 @@ import { Provider } from 'react-redux'
 import { store } from './redux/store'
 import './index.css'
 import App from './App'
+import { ToastContainer } from 'react-toastify'
 import reportWebVitals from './reportWebVitals'
 import 'react-datepicker/dist/react-datepicker.css'
+import 'react-toastify/dist/ReactToastify.min.css'
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
+      <ToastContainer />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
