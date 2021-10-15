@@ -35,7 +35,7 @@ yarn
 We need to connect to the deployed backend. Edit the `.env` file as follows:
 
 ```sh
-REACT_APP_API_URL=https://prospace-backend-production.up.railway.app
+REACT_APP_API_URL=https://prospace-backend-production.up.railway.app/
 ```
 
 ### Run Development
