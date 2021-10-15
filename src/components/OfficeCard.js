@@ -12,7 +12,7 @@ const OfficeCard = ({ name, locationLat, locationLong, startDate }) => {
       </div>
       <div className='my-4'>
         <p className='title'>Office Start Date:</p>
-        <p className='description'>{startDate}</p>
+        <p className='description'>{startDate.slice(0, 10)}</p>
       </div>
     </div>
   )
