@@ -35,8 +35,8 @@ const Company = () => {
                   ({data.companyData.phoneCode}) {data.companyData.phoneNumber}
                 </p>
               </div>
-              <Link to='/'>
-                <button className='border rounded px-6 py-2 self-end bg-gray-300 hover:bg-yellow-100'>
+              <Link to='/' className='self-end'>
+                <button className='border rounded px-6 py-2 bg-gray-300 hover:bg-yellow-100'>
                   Back to Overview
                 </button>
               </Link>
