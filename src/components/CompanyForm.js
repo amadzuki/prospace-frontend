@@ -66,9 +66,10 @@ const CompanyForm = () => {
             className='input-box'
             placeholder='revenue'
             type='number'
-            {...register('revenue', { required: true })}
+            {...register('revenue', { required: true, min: 1 })}
           />
-          {errors.revenue && ErrorMessage('Revenue is required!')}
+          {errors.revenue &&
+            ErrorMessage('Revenue is required and cannot be negative!')}
         </div>
         <div className='flex flex-col mb-2'>
           <label
@@ -82,17 +83,22 @@ const CompanyForm = () => {
               className='input-box w-3/12'
               placeholder='code'
               type='text'
-              {...register('phoneCode', { required: true })}
+              {...register('phoneCode', { required: true, pattern: /^[0-9]$/ })}
             />
             <input
               className='input-box w-8/12'
               placeholder='number'
               type='text'
-              {...register('phoneNumber', { required: true })}
+              {...register('phoneNumber', {
+                required: true,
+                pattern: /^[0-9]$/,
+              })}
             />
           </div>
           {(errors.phoneCode || errors.phoneNumber) &&
-            ErrorMessage('Phone code and number is required!')}
+            ErrorMessage(
+              'Phone code and number is required and must be number!'
+            )}
         </div>
         <input
           disabled={isLoading}
