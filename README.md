@@ -26,7 +26,9 @@ These are the stacks I used in this project:
 - **React Router DOM** — Declarative routing for React
 - **React Hook Form** — Simple React forms binding and validation
 - **React Toastify** — Super easy toast component
+- **React Date Picker** — A simple and reusable Datepicker component for React
 - **Tailwind CSS** — Rapidly build modern websites without ever leaving your HTML
+- **ESLint** — Pluggable JavaScript linter
 
 ## Getting Started
 
