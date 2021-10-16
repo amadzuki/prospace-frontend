@@ -1,5 +1,7 @@
 # Company Information Management Form
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1eb458a1-0f56-4d2a-807d-44172760f1fe/deploy-status)](https://app.netlify.com/sites/prospace-amadzuki/deploys)
+
 > A frontend coding challange from ProSpace
 
 It's a simple company and office listing app. It records company's information and its offices. Built on React and used Redux for the state management (as stated in the requirements). For the CSS framework I used Tailwind CSS. And for the form component I utilized React Hook Form. I also set a simple Node.js + Express backend that deployed on a free hosting service.
