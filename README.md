@@ -4,6 +4,12 @@
 
 It's a simple company and office listing app. It records company's information and its offices. Built on React and used Redux for the state management (as stated in the requirements). For the CSS framework I used Tailwind CSS. And for the form component I utilized React Hook Form. I also set a simple Node.js + Express backend that deployed on a free hosting service.
 
+You can see the deployed demo on this link: [https://prospace-amadzuki.netlify.app/](https://prospace-amadzuki.netlify.app/)
+
+## Non-trivial Assumption
+
+It might be too excessive for me to include a backend in this challange. But it's written in the challange description that creating _NodeJS Server Application is for better data persistence_. As a result, the Redux is mostly using **RTK Query** middleware to handle data change. I just recently trying out this particular tool (RTK Query) and I think that this is clearly a better solution for Redux to communicate with server.
+
 ## Tech Stacks
 
 These are the stacks I used in this project:
@@ -43,6 +49,8 @@ REACT_APP_API_URL=https://prospace-backend-production.up.railway.app/
 ```sh
 yarn start
 ```
+
+Access the running app on: http://localhost:3000
 
 ## Author
 
