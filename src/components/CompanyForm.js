@@ -22,10 +22,10 @@ const CompanyForm = () => {
   useEffect(() => {
     if (!isLoading && isError) {
       console.log('error toast code')
-      toast.error('Office creation failure...')
+      toast.error('Company creation failure...')
     } else if (!isLoading && isSuccess) {
       console.log('success toast code')
-      toast.success('Successfully add new office!')
+      toast.success('Successfully add new company!')
       reset()
     }
   }, [isError, isSuccess])
