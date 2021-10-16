@@ -62,17 +62,17 @@ const OfficeForm = () => {
               className='input-box w-6/12'
               placeholder='latitude'
               type='text'
-              {...register('lat', { required: true })}
+              {...register('lat', { required: true, pattern: /\.*\d+$/ })}
             />
             <input
               className='input-box'
               placeholder='longitude'
               type='text'
-              {...register('long', { required: true })}
+              {...register('long', { required: true, pattern: /\.*\d+$/ })}
             />
           </div>
-          {(errors.lat || errors.lang) &&
-            ErrorMessage('Location coordinate is required!')}
+          {(errors.lat || errors.long) &&
+            ErrorMessage('Appropriate location coordinate is required!')}
         </div>
         <div className='flex flex-col mb-2'>
           <label
